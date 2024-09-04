@@ -24,10 +24,11 @@
         <!-- Portfolio Item 1: Image from the Internet with Lightbox -->
         <?php foreach($page->media_items as $item) :
             if($item->image):
+                $image = $item->image;
             ?>
             <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <a href="<?= $item->url ?>" data-lightbox="portfolio" data-title="<? $item->title ?>">
-                <img src="<?= $item->width(1000)->url ?>" alt="<? $item->title ?>" class="w-full h-full object-cover">
+            <a href="<?= $image->url ?>" data-lightbox="portfolio" data-title="<? $item->title ?>">
+                <img src="<?= $image->width(1000)->url ?>" alt="<? $item->title ?>" class="w-full h-full object-cover">
             </a>
             <div class="p-4">
                 <h3 class="text-xl font-semibold"><? $item->title ?></h3>
