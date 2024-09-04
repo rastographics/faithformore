@@ -1,3 +1,27 @@
+<?php namespace ProcessWire;
+
+<?php
+// Check if the query parameter 'qr' is present and has a value
+if ($input->get('qr')) {
+    // Get the value of the 'qr' parameter. Expecting the value to be "chapter-1"
+    $qrValue = $input->get('qr');
+    
+    // Redirect to another page
+    // Example: Redirect to a specific page based on the value of 'qr'
+    // Replace 'your-page-path' with the actual path of the page you want to redirect to
+    $redirectPage = $pages->get("/book/$qrValue/");
+    
+    // Perform the redirect
+    if ($redirectPage instanceof Page && $redirectPage->id) {
+        $session->redirect($redirectPage->url);
+    } else {
+        // Optionally handle case where the redirect page does not exist
+        $session->redirect($pages->get("/404/")->url); // Redirect to a 404 page or any other fallback
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
