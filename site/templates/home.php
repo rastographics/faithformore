@@ -1,6 +1,5 @@
 <?php namespace ProcessWire;
 
-<?php
 // Check if the query parameter 'qr' is present and has a value
 if ($input->get('qr')) {
     // Get the value of the 'qr' parameter. Expecting the value to be "chapter-1"
