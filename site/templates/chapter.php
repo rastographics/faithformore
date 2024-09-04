@@ -42,7 +42,7 @@
            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <iframe src="https://player.vimeo.com/video/<?= $item->vimeo_id ?>" class="w-full h-64" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             <div class="p-4">
-                <h3 class="text-xl font-semibold"><?= $item->title?>/h3>
+                <h3 class="text-xl font-semibold"><?= $item->title?></h3>
                 <p class="text-sm mt-2"><?= $item->summary?></p>
             </div>
         </div>
