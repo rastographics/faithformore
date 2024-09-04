@@ -23,8 +23,8 @@
         
         <!-- Portfolio Item 1: Image from the Internet with Lightbox -->
         <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <a href="https://images.unsplash.com/photo-1521747116042-5a810fda9664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" data-lightbox="portfolio" data-title="Beautiful Landscape">
-                <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Beautiful Landscape" class="w-full h-full object-cover">
+            <a href="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" data-lightbox="portfolio" data-title="Beautiful Landscape">
+                <img src="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" alt="Beautiful Landscape" class="w-full h-full object-cover">
             </a>
             <div class="p-4">
                 <h3 class="text-xl font-semibold">Sample Image</h3>
