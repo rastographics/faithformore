@@ -22,9 +22,9 @@
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         
         <!-- Portfolio Item 1: Image from the Internet with Lightbox -->
-        <?php foreach($page->media_items as $item) 
+        <?php foreach($page->media_items as $item) :
             if($item->image):
-            :?>
+            ?>
             <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <a href="<?= $item->url ?>" data-lightbox="portfolio" data-title="<? $item->title ?>">
                 <img src="<?= $item->width(1000)->url ?>" alt="<? $item->title ?>" class="w-full h-full object-cover">
