@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
+    
 
 </head>
 <body class="bg-gray-900 text-white">
@@ -56,18 +57,18 @@
 
             <!-- Portfolio Item 3: Embedded Audio from SoundCloud -->
        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                <div class="p-4">
-                    <audio id="<?=$item->name?>" preload="auto" controls>
-                        <source src="<?=$item->audio->url?>" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-semibold"><?=$item->title?></h3>
-                    <p class="text-sm mt-2"><?= $item->summary?></p>
-                </div>
-            </div>
-
+    <div class="p-4">
+        <!-- Audio.js player -->
+        <audio id="<?=$item->name?>" preload="auto">
+            <source src="<?=$item->audio->url?>" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="p-4">
+        <h3 class="text-xl font-semibold"><?=$item->title?></h3>
+        <p class="text-sm mt-2"><?= $item->summary?></p>
+    </div>
+</div>
 
                 <?php endif;
 
