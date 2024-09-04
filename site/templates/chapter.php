@@ -66,7 +66,9 @@
             ?>
             <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <a href="<?= $image->url ?>" data-lightbox="portfolio" data-title="<?= $item->title ?>">
+                <div class="aspect-w-16 aspect-h-9">
                 <img src="<?= $image->width(1000)->url ?>" alt="<?= $item->title ?>" class="w-full h-full object-cover">
+                </div>
             </a>
             <div class="p-4">
                 <h3 class="text-xl font-semibold"><?= $item->title ?></h3>
