@@ -23,8 +23,8 @@
         
         <!-- Portfolio Item 1: Image from the Internet with Lightbox -->
         <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <a href="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" data-lightbox="portfolio" data-title="Beautiful Landscape">
-                <img src="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" alt="Beautiful Landscape" class="w-full h-full object-cover">
+            <a href="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" data-lightbox="portfolio" data-title="Dr. Keith Gomez">
+                <img src="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" alt="Dr. Keith Gomez" class="w-full h-full object-cover">
             </a>
             <div class="p-4">
                 <h3 class="text-xl font-semibold">Sample Image</h3>
