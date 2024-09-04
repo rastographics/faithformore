@@ -12,8 +12,41 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
+
+    <style>
+    /* Custom styles for the Audio.js player using Tailwind utilities */
+
+    /* Styling the main player container */
+    .audiojs {
+        @apply flex items-center bg-gray-700 p-4 rounded-lg;
+    }
+
+    /* Play and pause button */
+    .audiojs .play-pause a {
+        @apply bg-orange-500 text-white text-center p-3 rounded-full;
+    }
+
+    /* Scrubber (progress bar container) */
+    .audiojs .scrubber {
+        @apply bg-gray-500 h-2 rounded-full w-full mx-4 relative;
+    }
+
+    /* Progress bar */
+    .audiojs .scrubber .progress {
+        @apply bg-orange-500 h-2 rounded-full absolute top-0 left-0;
+    }
+
+    /* Time display (current time and total duration) */
+    .audiojs .time {
+        @apply text-white text-sm;
+    }
+
+    /* Volume controls (optional) */
+    .audiojs .volume {
+        @apply ml-4;
+    }
+</style>
     
 
 </head>
