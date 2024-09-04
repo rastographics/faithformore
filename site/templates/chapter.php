@@ -36,17 +36,24 @@
             </div>
         </div>
        <?php  endif;
+
+             if($item->vimeo_id):
+            ?>
+           <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <iframe src="https://player.vimeo.com/video/<?= $item->vimeo_id ?>" class="w-full h-64" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div class="p-4">
+                <h3 class="text-xl font-semibold"><?= $item->title?>/h3>
+                <p class="text-sm mt-2"><?= $item->summary?></p>
+            </div>
+        </div>
+       <?php  endif;
+
+            
                 endforeach;?>
         
 
         <!-- Portfolio Item 2: Embedded Vimeo Video -->
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <iframe src="https://player.vimeo.com/video/613787666" class="w-full h-64" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">40 Years: Keith Gomez/h3>
-                <p class="text-sm mt-2">A description about this awesome video.</p>
-            </div>
-        </div>
+      
 
         <!-- Portfolio Item 3: Embedded Audio from SoundCloud -->
         <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
