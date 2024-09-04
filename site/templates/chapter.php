@@ -22,15 +22,21 @@
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         
         <!-- Portfolio Item 1: Image from the Internet with Lightbox -->
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <a href="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" data-lightbox="portfolio" data-title="Dr. Keith Gomez">
-                <img src="https://nwbbc.com/site/assets/files/1053/scan0020.1920x800.jpg" alt="Dr. Keith Gomez" class="w-full h-full object-cover">
+        <?php foreach($page->media_items as $item) 
+            if($item->image):
+            :?>
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <a href="<?= $item->url ?>" data-lightbox="portfolio" data-title="<? $item->title ?>">
+                <img src="<?= $item->width(1000)->url ?>" alt="<? $item->title ?>" class="w-full h-full object-cover">
             </a>
             <div class="p-4">
-                <h3 class="text-xl font-semibold">Sample Image</h3>
-                <p class="text-sm mt-2">This is just until we get more images. Click to see full size.</p>
+                <h3 class="text-xl font-semibold"><? $item->title ?></h3>
+                <p class="text-sm mt-2"><? $item->summary ?></p>
             </div>
         </div>
+       <?php  endif;
+                endforeach;?>
+        
 
         <!-- Portfolio Item 2: Embedded Vimeo Video -->
         <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
