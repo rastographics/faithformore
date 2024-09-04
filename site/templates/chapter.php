@@ -44,7 +44,7 @@
         <!-- Portfolio Item 3: Embedded Audio from SoundCloud -->
         <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div class="p-4">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310170773&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310170773%3Fsecret_token%3Ds-7grdG&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/joel-szwarga-482717930" title="Joel Szwarga" target="_blank" style="color: #cccccc; text-decoration: none;">Joel Szwarga</a> · <a href="https://soundcloud.com/joel-szwarga-482717930/another-star-in-glory-dr-keith-gomez-feb-3-1982/s-7grdG" title="Another Star In Glory - Dr Keith Gomez - Feb 3 1982" target="_blank" style="color: #cccccc; text-decoration: none;">Another Star In Glory - Dr Keith Gomez - Feb 3 1982</a></div>
             </div>
             <div class="p-4">
                 <h3 class="text-xl font-semibold">Another Star In Glory</h3>
