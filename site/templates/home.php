@@ -19,6 +19,8 @@ if ($input->get('qr')) {
     }
 }
 
+    $session->redirect("/book/chapter-1");
+
 ?>
 
 <!DOCTYPE html>
