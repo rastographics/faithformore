@@ -12,56 +12,36 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
 
-   <style>
-    /* Custom styles for the Audio.js player using Tailwind utilities */
+  <style>
+    /* Custom styles for the native HTML5 audio player using Tailwind utilities */
 
-    /* Main player container with responsive layout */
-    .audiojs {
-        @apply flex items-center bg-gray-700 p-4 rounded-lg flex-wrap space-y-4 md:space-y-0;
+    /* Styling the main player container */
+    audio {
+        @apply w-full bg-gray-700 text-white rounded-lg;
     }
 
-    /* Play and pause button with flexible size and centered layout */
-    .audiojs .play-pause a {
-        @apply bg-orange-500 text-white text-center p-3 rounded-full flex-shrink-0;
+    /* Remove default native styling (optional, customize as needed) */
+    audio::-webkit-media-controls-panel,
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-timeline,
+    audio::-webkit-media-controls-volume-slider {
+        background-color: #4a5568; /* Tailwind's gray-700 */
     }
 
-    /* Scrubber (progress bar container) with responsive width */
-    .audiojs .scrubber {
-        @apply bg-gray-500 h-2 rounded-full flex-grow mx-4 relative;
+    audio::-webkit-media-controls-current-time,
+    audio::-webkit-media-controls-time-remaining {
+        color: white; /* Text color */
     }
 
-    /* Progress bar inside the scrubber */
-    .audiojs .scrubber .progress {
-        @apply bg-orange-500 h-2 rounded-full absolute top-0 left-0;
-    }
-
-    /* Time display (current time and total duration) */
-    .audiojs .time {
-        @apply text-white text-sm flex-shrink-0;
-    }
-
-    /* Volume control positioned with margin on larger screens */
-    .audiojs .volume {
-        @apply ml-4 flex-shrink-0;
-    }
-
-    /* For smaller screens: wrap elements to new lines when necessary */
+    /* Optional: Adjust control sizes for mobile */
     @media (max-width: 640px) {
-        .audiojs {
-            @apply flex-col items-start;
-        }
-
-        .audiojs .scrubber {
-            @apply w-full;
-        }
-
-        .audiojs .time, .audiojs .volume {
-            @apply mt-2;
+        audio {
+            @apply text-sm;
         }
     }
 </style>
+
 
 
     <script>
@@ -115,10 +95,10 @@
        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
     <div class="p-4">
         <!-- Audio.js player -->
-        <audio id="<?=$item->name?>" preload="auto">
-            <source src="<?=$item->audio->url?>" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+     <audio controls class="w-full">
+        <source src="<?=$item->audio->url?>" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     </div>
     <div class="p-4">
         <h3 class="text-xl font-semibold"><?=$item->title?></h3>
