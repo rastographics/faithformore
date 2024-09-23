@@ -14,39 +14,55 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
 
-    <style>
+   <style>
     /* Custom styles for the Audio.js player using Tailwind utilities */
 
-    /* Styling the main player container */
+    /* Main player container with responsive layout */
     .audiojs {
-        @apply flex items-center bg-gray-700 p-4 rounded-lg;
+        @apply flex items-center bg-gray-700 p-4 rounded-lg flex-wrap space-y-4 md:space-y-0;
     }
 
-    /* Play and pause button */
+    /* Play and pause button with flexible size and centered layout */
     .audiojs .play-pause a {
-        @apply bg-orange-500 text-white text-center p-3 rounded-full;
+        @apply bg-orange-500 text-white text-center p-3 rounded-full flex-shrink-0;
     }
 
-    /* Scrubber (progress bar container) */
+    /* Scrubber (progress bar container) with responsive width */
     .audiojs .scrubber {
-        @apply bg-gray-500 h-2 rounded-full w-full mx-4 relative;
+        @apply bg-gray-500 h-2 rounded-full flex-grow mx-4 relative;
     }
 
-    /* Progress bar */
+    /* Progress bar inside the scrubber */
     .audiojs .scrubber .progress {
         @apply bg-orange-500 h-2 rounded-full absolute top-0 left-0;
     }
 
     /* Time display (current time and total duration) */
     .audiojs .time {
-        @apply text-white text-sm;
+        @apply text-white text-sm flex-shrink-0;
     }
 
-    /* Volume controls (optional) */
+    /* Volume control positioned with margin on larger screens */
     .audiojs .volume {
-        @apply ml-4;
+        @apply ml-4 flex-shrink-0;
+    }
+
+    /* For smaller screens: wrap elements to new lines when necessary */
+    @media (max-width: 640px) {
+        .audiojs {
+            @apply flex-col items-start;
+        }
+
+        .audiojs .scrubber {
+            @apply w-full;
+        }
+
+        .audiojs .time, .audiojs .volume {
+            @apply mt-2;
+        }
     }
 </style>
+
 
     <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
