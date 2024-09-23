@@ -113,15 +113,6 @@
         
 
      
-
-    
-
-<script>
-    audiojs.events.ready(function() {
-        var as = audiojs.createAll();
-    });
-</script>
-
         <!-- Additional Portfolio Items can go here -->
 
     </main>
