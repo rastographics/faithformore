@@ -26,12 +26,12 @@
     audio::-webkit-media-controls-play-button,
     audio::-webkit-media-controls-timeline,
     audio::-webkit-media-controls-volume-slider {
-        background-color: #4a5568; /* Tailwind's gray-700 */
+      /*     background-color: #4a5568;  Tailwind's gray-700 */
     }
 
     audio::-webkit-media-controls-current-time,
     audio::-webkit-media-controls-time-remaining {
-        color: white; /* Text color */
+       /* color: white;  Text color */
     }
 
     /* Optional: Adjust control sizes for mobile */
